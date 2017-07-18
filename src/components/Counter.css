@@ -1,3 +1,8 @@
+.countOuter{
+  margin-bottom: 100px;
+  background: #fff;
+  text-align: center;
+}
 .counter {
   display: inline-block;
   width: 88px;

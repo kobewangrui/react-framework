@@ -16,11 +16,15 @@ class Counter extends Component {
   }
   render () {
     return (
-      <a className='counter'
-        href='javascript: void(0)'
-        onClick={this.handleClick}>
-        {this.props.counter.count}
-      </a>
+      <div className='countOuter'>
+        <p>这是一个统计的全局组件</p>
+        <a className='counter'
+          href='javascript: void(0)'
+          onClick={this.handleClick}>
+          {this.props.counter.count}
+        </a>
+      </div>
+
     )
   }
 }
