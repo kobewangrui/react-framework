@@ -34,15 +34,16 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.jsx?$/,
-                loader: 'eslint-loader',
-                enforce: 'pre',
-                include: [resolve('src'), resolve('test')],
-                options: {
-                    formatter: require('eslint-friendly-formatter')
-                }
-            },
+            // 语法严格模式
+            // {
+            //     test: /\.jsx?$/,
+            //     loader: 'eslint-loader',
+            //     enforce: 'pre',
+            //     include: [resolve('src'), resolve('test')],
+            //     options: {
+            //         formatter: require('eslint-friendly-formatter')
+            //     }
+            // },
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
