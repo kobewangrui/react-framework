@@ -5,8 +5,8 @@ import { NavLink as Link } from 'react-router-dom'
 
 import Hello from 'components/Hello'
 import Counter from 'components/Counter'
-import logo from '../assets/logo.svg'
-import './MainView.css'
+import logo from 'assets/image/logo.svg'
+import 'assets/css/MainView.css'
 
 export default class MainView extends Component {
   static propTypes = {

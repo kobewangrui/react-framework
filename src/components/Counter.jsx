@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as CounterActions from '$redux/actions'
 
-import './Counter.css'
+import 'assets/css/Counter.css'
 
 class Counter extends Component {
   static propTypes = {
