@@ -12,7 +12,7 @@ export default class MainView extends Component {
   static propTypes = {
     route: PropTypes.object
   }
-  render () {
+  render() {
     return (
       <div className='index'>
         <div className='App-header'>

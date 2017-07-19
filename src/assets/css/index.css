@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:none;
+}
+html{
+    font-size: 0.625rem;
+}
+body{
+    font-size: 1.6rem;
+}
+nav .nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    background: #f1f2f7;
+    padding: 20px;
+}
+nav .nav li{
+    list-style: none;
+}

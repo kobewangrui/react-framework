@@ -1,23 +1,23 @@
-import MainView from 'views/MainView'
-import SyncView from 'views/SyncView'
 import Loadable from 'react-loadable'
+import Index from 'views/Index'
 
 export default [
   {
     path: '/',
-    component: MainView,
+    component: Index,
     childRoutes: [
       {
-        path: '/sync',
-        component: SyncView
+        path:'/one',
+        component: Loadable({
+          loader:() => import('views/One'),
+          LoadingComponent:() => null
+        })
       },
       {
-        path: '/async',
+        path:'/two',
         component: Loadable({
-          loader: () => import(`views/AsyncView`),
-          // if you have your own loading component,
-          // you should consider add it here
-          LoadingComponent: () => null
+          loader:() => import('views/Two'),
+          LoadingComponent:() => null
         })
       }
     ]
