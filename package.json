@@ -72,13 +72,15 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "es6-promise": "^4.1.1",
+    "isomorphic-fetch": "^2.2.1",
+    "prop-types": "^15.5.8",
     "react": "^16.0.0-alpha.12",
     "react-dom": "^16.0.0-alpha.12",
-    "prop-types": "^15.5.8",
-    "react-router-config": "^1.0.0-beta.3",
     "react-loadable": "^3.3.1",
-    "react-router-dom": "^4.1.1",
     "react-redux": "^5.0.4",
+    "react-router-config": "^1.0.0-beta.3",
+    "react-router-dom": "^4.1.1",
     "redux": "^3.6.0"
   },
   "engines": {
