@@ -19,6 +19,20 @@ export default [
           loader:() => import('views/Two'),
           LoadingComponent:() => null
         })
+      },
+      {
+        path:'/three',
+        component: Loadable({
+          loader:() => import('views/Three'),
+          LoadingComponent:() => null
+        })
+      },
+      {
+        path:'/four',
+        component: Loadable({
+          loader:() => import('views/Four'),
+          LoadingComponent:() => null
+        })
       }
     ]
   }
