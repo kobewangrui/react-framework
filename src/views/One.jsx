@@ -4,8 +4,8 @@ import 'assets/css/one.css'
 import Group from 'components/Group'
 
 export default class One extends Component {
-    constructor(props){/**props需要作为参数传入**/
-        super(props);
+    constructor(){/**props需要作为参数传入**/
+        super();
         this.state = {
             name:'',
             sex:'man',
