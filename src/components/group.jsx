@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
 export default class Group extends Component{
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
     }
     render(){
         return(
-            <div>这是个组件。。。。---{this.props.name}-----</div>
+            <div>这是个组件。。。。-----{this.props.name}-----</div>
         )
     }
 }
