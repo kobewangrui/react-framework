@@ -55,6 +55,9 @@ export default class Group extends Component{
                 this.setState({
                     lists: res
                 })
+                alert('发布成功！')
+                console.log(this.props.route)
+                this.props.history.push('/two')
             })
             .catch((err)=>{
                 console.log(err)
