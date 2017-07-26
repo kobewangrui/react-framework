@@ -20,16 +20,16 @@ export default class Index extends Component {
         </nav>
           <div>
             <p>
-                <Link to='/one'>去one页面</Link>
+                <Link to='/one' exact>去one页面</Link>
             </p>
             <p>
-                <Link to={{pathname:'/two',query:{projectId:1234}}} activeClassName='textColor'>去two页面</Link>
+                <Link to={{pathname:`/two/123`}} activeClassName='textColor' exact>去two页面</Link>
             </p>
             <p>
-                <Link to={{pathname:'/three',query:{projectId:1234}}} activeClassName='textColor'>去three页面</Link>
+                <Link to={{pathname:'/three',query:{projectId:1234}}} activeClassName='textColor' exact>去three页面</Link>
             </p>
             <p>
-                <Link to={{pathname:'/four',query:{projectId:1234}}} activeClassName='textColor'>去four页面</Link>
+                <Link to={{pathname:'/four',query:{projectId:1234}}} activeClassName='textColor' exact>去four页面</Link>
             </p>
             <p>
                 <Link to='/'>去首页</Link>
