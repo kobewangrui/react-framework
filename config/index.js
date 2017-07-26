@@ -7,7 +7,7 @@ module.exports = {
         index: path.resolve(__dirname, '../dist/index.html'),
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '/',
+        assetsPublicPath: '/dist/',
         // disable by default for clients should not
         // get your source code from sourceMap.
         // feel free to turn it on when you need sourceMap
@@ -31,7 +31,15 @@ module.exports = {
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        proxyTable: {},
+        proxyTable: {
+            '/api':{
+                target:'http://127.0.0.1:3000/api',
+                changeOrigin:true,
+                pathRewrite:{
+                    '^/api':''
+                }
+            }
+        },
         // CSS Sourcemaps off by default because relative paths are "buggy"
         // with this option, according to the CSS-Loader README
         // (https://github.com/webpack/css-loader#sourcemaps)

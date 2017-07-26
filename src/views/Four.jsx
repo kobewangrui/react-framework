@@ -4,10 +4,10 @@ export default class Group extends Component{
     constructor(){
         super()
         this.state = {
-            price:'',
-            title:'',
-            spicialPrice:'',
-            allowance:''
+            price:123,
+            title:123,
+            spicialPrice:123,
+            allowance:123
         }
     }
     compponentDidMount(){
@@ -34,19 +34,19 @@ export default class Group extends Component{
         })
     }
     fetchData = ()=>{
-        let url = `http://localhost:3000/api/product/addProduct`,
-            req = {         
+        let url = `/api/product/addProduct`,
+            req = JSON.stringify({
                 title : this.state.title,
                 price : this.state.price,
                 spicialPrice : this.state.spicialPrice,
                 allowance : this.state.allowance
-            };
+            });
         fetch(url,{
                 method:'POST',
-                headers:{
-                    'Content-Type':'application/x-www-form-urlencoded' 
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: JSON.stringify(req)
+                body: req
             })
             .then((json)=>{
                 return json.json();
