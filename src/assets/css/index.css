@@ -19,3 +19,6 @@ nav .nav{
 nav .nav li{
     list-style: none;
 }
+.textColor{
+    color: orange;
+}

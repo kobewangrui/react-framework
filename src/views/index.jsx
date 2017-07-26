@@ -23,13 +23,13 @@ export default class Index extends Component {
                 <Link to='/one'>去one页面</Link>
             </p>
             <p>
-                <Link to={{pathname:'/two',query:{projectId:1234}}}>去two页面</Link>
+                <Link to={{pathname:'/two',query:{projectId:1234}}} activeClassName='textColor'>去two页面</Link>
             </p>
             <p>
-                <Link to={{pathname:'/three',query:{projectId:1234}}}>去three页面</Link>
+                <Link to={{pathname:'/three',query:{projectId:1234}}} activeClassName='textColor'>去three页面</Link>
             </p>
             <p>
-                <Link to={{pathname:'/four',query:{projectId:1234}}}>去four页面</Link>
+                <Link to={{pathname:'/four',query:{projectId:1234}}} activeClassName='textColor'>去four页面</Link>
             </p>
             <p>
                 <Link to='/'>去首页</Link>
