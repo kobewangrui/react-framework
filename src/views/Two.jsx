@@ -11,7 +11,7 @@ export default class Two extends Component {
     }
     componentDidMount(){
         this.fetchData();
-        // this.getQuery();
+        this.getQuery();
     }
     getQuery = ()=>{
         let str = this.props.location.search,
