@@ -8,11 +8,9 @@ export default class One extends Component {
         super();
         this.state = {
             name:'',
-            sex:'',
+            sex:'man',
             remark:'',
-            basketball:false,
-            football:false,
-            pingpang:false
+            surport:''
         }
     }
     componentWillMount(){
@@ -25,7 +23,7 @@ export default class One extends Component {
     }
     sexChange = (event)=>{
         this.setState({
-            sex:event.target.value
+            sex: event.target.value
         })
     }
     remarkChange = (event)=>{
@@ -34,11 +32,9 @@ export default class One extends Component {
         })
     }
     surportChange = (event)=>{
-        let type = event.target.value,
-            checked = event.target.checked,
-            newState = {};
-        newState[type] = checked;
-        this.setState(newState)
+        this.setState({
+            surport: event.target.value
+        })
     }
     submitForm = ()=>{
         console.log(this);
@@ -53,11 +49,11 @@ export default class One extends Component {
                 {this.state.name}
                 <p>
                     <label htmlFor="man">男</label>
-                    <input name="sex" id="man" type='radio' checked={this.state.sex === 'man'} value='man' onChange={this.sexChange}/>
+                    <input name="sex" id="man" type='radio' value='man' defaultChecked onChange={this.sexChange}/>
                     <label htmlFor="woman">女</label>
-                    <input name="sex" id="woman" type='radio' checked={this.state.sex === 'woman'} value='woman' onChange={this.sexChange}/>
+                    <input name="sex" id="woman" type='radio' value='woman' onChange={this.sexChange}/>
                 </p>
-                ---{this.state.sex}---
+                {this.state.sex}
                 <p>
                     <label htmlFor="remark">备注</label>
                     <textarea name="reamrk" id="remark" value={this.state.remark} onChange={this.remarkChange}></textarea>
@@ -65,11 +61,11 @@ export default class One extends Component {
                 {this.state.remark}
                 <p>
                     <label htmlFor="basketball">篮球</label>
-                    <input type="checkbox" name="surport" id="basketball" checked={this.state.basketball} value='basketball' onChange={this.surportChange}/>
+                    <input type="checkbox" name="surport" id="basketball" value='basketball' onChange={this.surportChange}/>
                     <label htmlFor="football">足球</label>
-                    <input type="checkbox" name="surport" id="football" checked={this.state.football} value='football' onChange={this.surportChange}/>
+                    <input type="checkbox" name="surport" id="football" value='football' onChange={this.surportChange}/>
                     <label htmlFor="pingpang">篮球</label>
-                    <input type="checkbox" name="surport" id="pingpang" checked={this.state.pingpang} value='pingpang' onChange={this.surportChange}/>
+                    <input type="checkbox" name="surport" id="pingpang" value='pingpang' onChange={this.surportChange}/>
                 </p>
                 {this.state.surport}
                 <p>

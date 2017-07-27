@@ -7,11 +7,11 @@ export default class Group extends Component{
             price:123,
             title:123,
             spicialPrice:123,
-            allowance:123,
-            userName:'wangruilong'
+            allowance:123
         }
     }
-    componentDidMount(){
+    compponentDidMount(){
+        this.colorRed()
     }
     changeTitle = (event)=>{
         this.setState({
@@ -55,10 +55,9 @@ export default class Group extends Component{
                 this.setState({
                     lists: res
                 })
-                this.props.history.push({
-                    pathname : '/two',
-                    search : `?name=${this.state.userName}`
-                })
+                alert('发布成功！')
+                console.log(this.props.route)
+                this.props.history.push('/two')
             })
             .catch((err)=>{
                 console.log(err)
