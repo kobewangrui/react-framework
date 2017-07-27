@@ -14,15 +14,17 @@ export default class Two extends Component {
         this.getQuery();
     }
     getQuery = ()=>{
-        let str = this.props.location.search,
-            newUrl = JSON.parse("{" + 
-            str.replace("?", "\"")
-                .replace(new RegExp(/(&)/g),'\",\"')
-                .replace(new RegExp(/(=)/g),'\":\"')
-            + "\"}")
-        this.setState({
-            urls:newUrl
-        })
+        let str = this.props.location.search;
+            if(str !=='' && str !== undefined){
+                let newUrl = JSON.parse("{" + 
+                    str.replace("?", "\"")
+                        .replace(new RegExp(/(&)/g),'\",\"')
+                        .replace(new RegExp(/(=)/g),'\":\"')
+                    + "\"}")
+                this.setState({
+                    urls:newUrl
+                })
+            }
     }
     fetchData = ()=>{
         let url = 'http://localhost:3000/api/product/getList';
