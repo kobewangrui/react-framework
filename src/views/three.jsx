@@ -8,8 +8,8 @@ export default class Group extends Component{
             lists:[]
         }
     }
-    compponentDidMount(){
-        this.colorRed()
+    componentDidMount(){
+        console.log(this.props.location)
     }
     inputVal = (event)=>{
         this.setState({
@@ -38,6 +38,7 @@ export default class Group extends Component{
     render(){
         return(
             <div>
+                  ---<p>取url参数:{this.props.location.query.productId}</p> --- 
                 <input type='text' placeholder='根据productId搜索' value={this.state.productId} onChange={this.inputVal}/>
                 <button onClick={this.fetchData}>搜索产品</button>
                  {
