@@ -44,7 +44,7 @@ export default class Group extends Component{
         fetch(url,{
                 method:'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 },
                 body: req
             })
@@ -59,7 +59,7 @@ export default class Group extends Component{
                     pathname : '/two',
                     search : `?name=${this.state.userName}`
                 })
-            })
+            }) 
             .catch((err)=>{
                 console.log(err)
             })
