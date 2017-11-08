@@ -5,6 +5,7 @@ const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.conf');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const DashboardPlugin = require("webpack-dashboard/plugin");
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -33,6 +34,7 @@ module.exports = merge(baseWebpackConfig, {
             template: 'index.html',
             inject: true
         }),
-        new FriendlyErrorsPlugin()
+        new FriendlyErrorsPlugin(),
+        new DashboardPlugin(),
     ]
 });
