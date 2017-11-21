@@ -8,8 +8,8 @@ import 'assets/css/Counter.css'
 
 class Counter extends Component {
   static propTypes = {
-    actions: PropTypes.object,
-    counter: PropTypes.object
+    actions: PropTypes.object,//传入参数的类型
+    counter: PropTypes.object//传入参数的类型
   }
   handleClick = () => {
     this.props.actions.increment()
