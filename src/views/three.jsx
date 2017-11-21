@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import 'assets/css/three.css'
-export default class Group extends Component{
+export default class Three extends Component{
     constructor(){
         super()
         this.state = {

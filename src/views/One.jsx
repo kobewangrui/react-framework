@@ -12,7 +12,8 @@ export default class One extends Component {
             remark:'',
             basketball:false,
             football:false,
-            pingpang:false
+            pingpang:false,
+            propsData:'props父传子的数据'
         }
     }
     componentWillMount(){
@@ -46,7 +47,7 @@ export default class One extends Component {
     render(){
         return(
             <div className="pageOne">
-                <Group name={this.state.name}/>
+                <Group name={this.state.propsData}/>
                 <p>
                     <input type="text" placeholder="用户名" value={this.state.name} onChange={this.nameChange}/>
                 </p>

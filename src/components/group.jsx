@@ -8,7 +8,7 @@ export default class Group extends Component{
     render(){
         return(
             <div>
-                <div>这是个组件。。。。-----{this.props.name}-----</div>
+                <div>这是个复用组件：{this.props.name}</div>
             </div>
         )
     }
