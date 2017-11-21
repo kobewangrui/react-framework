@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { renderRoutes } from 'react-router-config' /**子路由**/
 import { NavLink as Link } from 'react-router-dom' /**路由跳转**/
+import Counter from 'components/Counter'
 
 import 'assets/css/index.css'
 
@@ -41,6 +42,7 @@ export default class Index extends Component {
             {renderRoutes(this.props.route.childRoutes)}
           </div>        
         <div>
+          <Counter/>
           index footer
         </div>
 
