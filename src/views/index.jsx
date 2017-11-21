@@ -5,6 +5,9 @@ import { NavLink as Link } from 'react-router-dom' /**路由跳转**/
 import 'assets/css/index.css'
 
 export default class Index extends Component {
+  componentDidMount(){
+        console.log(renderRoutes(this.props.route.childRoutes));
+  }
   render(){
     return (
       <div>
@@ -34,6 +37,7 @@ export default class Index extends Component {
             <p>
                 <Link to='/'>去首页</Link>
             </p>
+            {JSON.stringify(this.props.route.childRoutes)}
             {renderRoutes(this.props.route.childRoutes)}
           </div>        
         <div>
