@@ -17,8 +17,8 @@ class Index extends Component {
         // console.log(connect);
         // console.log(bindActionCreators);
   }
-  changeNumber = ()=>{
-    this.props.actions.numberadd();
+  changeNumber = (arg)=>{
+    this.props.actions.numberadd(arg);
   }
   render(){
     return (
@@ -55,7 +55,7 @@ class Index extends Component {
         <div>
           index footer
           {JSON.stringify(this.props.number)}
-          <button onClick={this.changeNumber}>改变changechangechangechange</button>
+          <button onClick={this.changeNumber(1)}>改变changechangechangechange</button>
           ---Number:{this.props.number.number}---
         </div>
       </div>
