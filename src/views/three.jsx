@@ -4,12 +4,11 @@ export default class Three extends Component{
     constructor(){
         super()
         this.state = {
-            productId:1499668804565,
+            productId:1509952810754,
             lists:[]
         }
     }
     componentDidMount(){
-        this.colorRed()
     }
     inputVal = (event)=>{
         this.setState({
@@ -17,7 +16,7 @@ export default class Three extends Component{
         })
     }
     colorRed = (arg)=>{
-        return arg === '旅游线路1'?'titleColor':false
+        return arg ? 'titleColor' : false
         
     }
     fetchData = ()=>{
