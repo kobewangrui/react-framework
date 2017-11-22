@@ -13,7 +13,6 @@ class Index extends Component {
     counter: PropTypes.object//传入参数的类型
   }
   componentDidMount(){
-      this.props.actions.numberadd();//自执行的改变state的方法
         // console.log(renderRoutes(this.props.route.childRoutes));
         // console.log(connect);
         // console.log(bindActionCreators);
