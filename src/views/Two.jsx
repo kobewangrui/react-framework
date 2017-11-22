@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink as Link } from 'react-router-dom' /**路由跳转**/
+import Counter from 'components/Counter'
 
 export default class Two extends Component {
     constructor(){
@@ -44,6 +45,7 @@ export default class Two extends Component {
     render(){
         return(
             <div>
+                <Counter/>
                 <p>这是url上取下来的参数:{this.state.urls.name}</p>
                 <p>这是two页面</p>
                 {
