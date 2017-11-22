@@ -3,9 +3,11 @@ import { NavLink as Link } from 'react-router-dom' /**路由跳转**/
 import 'assets/css/one.css'
 import Group from 'components/Group'
 
-export default class One extends Component {
-    constructor(){/**props需要作为参数传入**/
-        super();
+export default class One extends Component {//要设置this.state的时候需要constructor，否则可以省略不写
+    constructor(props){/**props需要作为参数传入，就是当你需要在constructor内部调用props时候才将props传入super**/
+        super(props);//当存在constructor的时候，必须加super，super用来绑定子类(这里指的是One)的this
+        // super(props)的目的在constructor中使用this.props。
+        console.log(this.props);
         this.state = {
             name:'',
             sex:'',
@@ -17,7 +19,8 @@ export default class One extends Component {
         }
     }
     componentWillMount(){
-        console.log(this.state)
+        console.log(this.props);
+        console.log(this.state);
     }
     nameChange = (event)=>{
         this.setState({
