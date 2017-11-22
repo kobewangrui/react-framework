@@ -8,7 +8,7 @@ export default class Three extends Component{
             lists:[]
         }
     }
-    compponentDidMount(){
+    componentDidMount(){
         this.colorRed()
     }
     inputVal = (event)=>{
