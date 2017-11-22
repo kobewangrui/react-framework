@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as CounterActions from '$redux/actions'
+import * as CounterActions from '$redux/actions/index'
 
 import 'assets/css/Counter.css'
 
@@ -17,6 +17,7 @@ class Counter extends Component {
   render () {
     return (
       <div className='countOuter'>
+      {JSON.stringify(this.props.counter)}
         <p>这是一个统计的全局组件</p>
         <a className='counter'
           href='javascript: void(0)'
@@ -40,4 +41,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Counter)
+)(Counter)//在复用组件里面抛出接口
