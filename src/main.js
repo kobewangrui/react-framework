@@ -12,6 +12,9 @@ const render = Component => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
+      {/* 
+        provider本身没有做很多事情，只是把store放在context里面罢了，事实上使用react-redux，链接视图和数据层最好的方法是使用connect函数，本质上Provider就是给connect提供sotre用的
+      */}
         <Component />
       </Provider>
     </AppContainer>,
