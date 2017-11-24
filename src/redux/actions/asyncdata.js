@@ -4,12 +4,14 @@ const async_data = (list) => ({ type: ASYNC_DATA, lists: list})
 
 
 
-export const getTest = () => async function a(dispatch, getState){
-    try {
-        let response = await fetchData();
-        await dispatch(async_data(response));
-    } catch (error) {
-        console.log('error: ', error)
+export const getTest = () => {
+    return async (dispatch, getState)=>{
+        try {
+            let response = await fetchData();
+            await dispatch(async_data(response));
+        } catch (error) {
+            console.log('error: ', error)
+        }
     }
 }
 
