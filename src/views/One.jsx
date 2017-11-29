@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink as Link } from 'react-router-dom' /**路由跳转**/
+import { NavLink as Link , Redirect } from 'react-router-dom' /**路由跳转**/
 import 'assets/css/one.css'
 import Group from 'components/Group'
 
@@ -48,6 +48,11 @@ export default class One extends Component {//要设置this.state的时候需要
         console.log(this);
     }
     render(){
+        if(true){
+            return(
+            <Redirect to="/Four"/>
+            )
+        }
         return(
             <div className="pageOne">
                 <Group name={this.state.propsData}/>
