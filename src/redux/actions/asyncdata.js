@@ -20,7 +20,7 @@ export const getTest = () => {
 // fetch获取数据
 let fetchData = ()=>{
     return new Promise((resolve,reject)=>{
-        fetch('http://localhost:3000/api/product/getList')
+        fetch('/api/product/getList')
         .then((json)=>{
             return json.json();
         })

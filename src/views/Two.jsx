@@ -28,7 +28,7 @@ export default class Two extends Component {
             }
     }
     fetchData = ()=>{
-        let url = 'http://localhost:3000/api/product/getList';
+        let url = '/api/product/getList';
         fetch(url)
             .then((json)=>{
                 return json.json();

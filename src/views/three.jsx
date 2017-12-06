@@ -20,7 +20,7 @@ export default class Three extends Component{
         
     }
     fetchData = ()=>{
-        let url = `http://localhost:3000/api/product/search?productId=${this.state.productId}`;
+        let url = `/api/product/search?productId=${this.state.productId}`;
         fetch(url)
             .then((json)=>{
                 return json.json();
