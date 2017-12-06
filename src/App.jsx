@@ -22,8 +22,8 @@ class App extends Component {
     fetchData = ()=>{
       let url = `/api/consumers/login`,
           req = JSON.stringify({
-              userName : 'wrl',
-              passWord : '123123',
+              userName : '王大锤1',
+              passWord : '1233211',
           });
       fetch(url,{
               method:'POST',
