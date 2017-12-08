@@ -12,18 +12,20 @@ class App extends Component {
     actions: PropTypes.object,
     counter: PropTypes.object
   }
-    componentWillMount(){
-      this.fetchData();
-    }
-
+  componentWillMount(){
+    this.fetchData();
+  }
+  checkUser = ()=>{
+    console.log(this.props);
+  }
   changeNumber = (msg)=>{
     this.props.actions.numberadd(msg);
   }
     fetchData = ()=>{
       let url = `/api/consumers/login`,
           req = JSON.stringify({
-              userName : '王大锤1',
-              passWord : '1233211',
+              userName : '王大锤',
+              passWord : '111111',
           });
       fetch(url,{
               method:'POST',
@@ -45,7 +47,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <Router>
+        <Router onEnter={this.checkUser()}>
           {renderRoutes(routes)}
         </Router>
       </div>
