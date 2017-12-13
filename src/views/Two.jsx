@@ -13,6 +13,7 @@ export default class Two extends Component {
     componentDidMount(){
         this.fetchData();
         this.getQuery();
+        console.log(this.refs.a.getBoundingClientRect());
     }
     getQuery = ()=>{
         let str = this.props.location.search;
@@ -45,8 +46,8 @@ export default class Two extends Component {
     render(){
         return(
             <div>
-                <Counter/>
-                <p>这是url上取下来的参数:{this.state.urls.name}</p>
+                <Counter />
+                <p ref="a">这是url上取下来的参数:{this.state.urls.name}</p>
                 <p>这是two页面</p>
                 {
                     this.state.lists.map((item,index)=>{
