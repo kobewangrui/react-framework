@@ -29,7 +29,7 @@ export default class Two extends Component {
             }
     }
     fetchData = ()=>{
-        let url = '/api/product/getList';
+        let url = '/api/produnmct/getList';
         fetch(url)
             .then((json)=>{
                 return json.json();
