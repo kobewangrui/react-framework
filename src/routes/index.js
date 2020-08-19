@@ -33,7 +33,7 @@ export default [
           loader:() => import('views/Four'),
           LoadingComponent:() => null
         })
-      },,
+      },
       {
         path:'/SyncView',
         component: Loadable({

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { renderRoutes } from 'react-router-config' /**子路由**/
 import { NavLink as Link } from 'react-router-dom' /**路由跳转**/
 import PropTypes from 'prop-types'
+import GGEditor, { Flow, EditableLabel } from 'gg-editor';
 import { connect } from 'react-redux'//引入react-redux
 import { bindActionCreators } from 'redux'//引入redux
 import * as NumberActions from '$redux/actions/number'
@@ -21,6 +22,29 @@ class Index extends Component {
     this.props.actions.numberadd(arg);
   }
   render(){
+    const data = {
+      nodes: [
+        {
+          id: '0',
+          label: 'Node',
+          x: 55,
+          y: 55,
+        },
+        {
+          id: '1',
+          label: 'Node',
+          x: 55,
+          y: 255,
+        },
+      ],
+      edges: [
+        {
+          label: 'Label',
+          source: '0',
+          target: '1',
+        },
+      ],
+    }
     return (
       <div>
         <nav>
@@ -33,6 +57,10 @@ class Index extends Component {
                 <li>导航6</li>
             </ul>
         </nav>
+          <GGEditor>
+            <Flow style={{ width: 1000, height: 1000 }} data={data} />
+            <EditableLabel/>
+          </GGEditor>
           <div>
             <p>
                 <Link to='/one' exact>去one页面</Link>
