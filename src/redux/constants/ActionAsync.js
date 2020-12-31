@@ -1,1 +1,0 @@
-export const ASYNC_DATA = 'ASYNC_DATA'
